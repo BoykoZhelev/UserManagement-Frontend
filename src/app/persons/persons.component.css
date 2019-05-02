@@ -1,0 +1,13 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+#persons-container{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color: rgb(248,249,250);
+}
+
+.btn-danger , .btn-info {
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+

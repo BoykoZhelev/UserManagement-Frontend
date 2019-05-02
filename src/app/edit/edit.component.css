@@ -1,0 +1,9 @@
+.container{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color:rgb(248,249,250);
+}
+h3{
+  background-color: #343a40;
+  color: white;
+}

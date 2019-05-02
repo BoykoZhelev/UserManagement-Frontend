@@ -1,0 +1,12 @@
+.container{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+button{
+  color: rgb(33,37,41);
+}
+
+#home-button{
+  padding-left: 0;
+}

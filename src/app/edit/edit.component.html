@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>Edit person data</h3>
+  <div class="input-group">
+    <label for="fName">First name</label>
+    <div class="input-group mb-3">
+      <input id="fName" [(ngModel)]="personData.firstName" placeholder="First name" />
+    </div>
+
+    <label for="lName">Last name</label>
+    <div class="input-group mb-3">
+      <input id = 'lName' [(ngModel)]="personData.lastName" placeholder="Last name" />
+    </div>
+    <label for="email">Email</label>
+    <div class="input-group mb-3">
+      <input id ='email' [(ngModel)]="personData.email" placeholder="Product Price" />
+    </div>
+    <label>Date of birth</label>
+    <div class="input-group mb-3">
+      <input type="date" [ngModel] ="personData.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="personData.birthDate = $event">
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="updatePerson()">Update</button>
+</div>

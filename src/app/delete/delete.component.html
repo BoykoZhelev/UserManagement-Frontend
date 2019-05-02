@@ -1,0 +1,23 @@
+<div class="container" >
+  <h3>Delete person</h3>
+  <div class="input-group">
+    <label for="fName">First name</label>
+    <div class="input-group mb-3">
+      <input id="fName" [(ngModel)]="personData.firstName" placeholder="First name" disabled/>
+    </div>
+
+    <label for="lName">Last name</label>
+    <div class="input-group mb-3">
+      <input id = 'lName' [(ngModel)]="personData.lastName" placeholder="Last name" disabled/>
+    </div>
+    <label for="email">Email</label>
+    <div class="input-group mb-3">
+      <input id ='email' [(ngModel)]="personData.email" placeholder="Email" disabled/>
+    </div>
+    <label>Date of birth</label>
+    <div class="input-group mb-3">
+      <input type="text"  id="birthDate"  ngbDatepicker [(ngModel)]="personData.birthDate" placeholder="Date of birth" disabled/>
+    </div>
+   </div>
+  <button class="btn btn-primary" (click)="deletePerson()">Delete</button>
+</div>
