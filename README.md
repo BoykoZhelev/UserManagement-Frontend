@@ -7,7 +7,7 @@ Frameworks and libraries : Angular,  Angular CLI ,  Node.js,  Bootstrap
 
 The application is configured to searc for webservice on localhost:8080
 
-Immediately before first build run 'ng update'.
+Immediately before first build run 'npm install' and 'ng update'.
 
 ## Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
