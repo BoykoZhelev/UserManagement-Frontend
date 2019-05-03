@@ -1,23 +1,22 @@
-<div class="container" >
-  <h3>Delete person</h3>
+<div class="container">
+  <h3 class="custom-header">Delete personal data</h3>
   <div class="input-group">
-    <label for="fName">First name</label>
-    <div class="input-group mb-3">
-      <input id="fName" [(ngModel)]="personData.firstName" placeholder="First name" disabled/>
+    <label for="fName" class="input-label">First name</label>
+    <div class="input-group  mb-3">
+      <input class="custom-input" id='fName' [(ngModel)]="personData.firstName" placeholder="First name" disabled/>
     </div>
-
-    <label for="lName">Last name</label>
+    <label for="lName" class="input-label">Last name</label>
     <div class="input-group mb-3">
-      <input id = 'lName' [(ngModel)]="personData.lastName" placeholder="Last name" disabled/>
+      <input class="custom-input" id = 'lName' [(ngModel)]="personData.lastName" placeholder="Last name" disabled />
     </div>
-    <label for="email">Email</label>
+    <label for="email" class="input-label">Email</label>
     <div class="input-group mb-3">
-      <input id ='email' [(ngModel)]="personData.email" placeholder="Email" disabled/>
+      <input class="custom-input" id ='email' [(ngModel)]="personData.email" placeholder="Email" disabled/>
     </div>
-    <label>Date of birth</label>
+    <label for="birthDate" class="input-label">Date of birth</label>
     <div class="input-group mb-3">
-      <input type="text"  id="birthDate"  ngbDatepicker [(ngModel)]="personData.birthDate" placeholder="Date of birth" disabled/>
+      <input class="custom-input" id='birthDate' type="date" [ngModel] ="personData.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="personData.birthDate = $event" disabled>
     </div>
-   </div>
-  <button class="btn btn-primary" (click)="deletePerson()">Delete</button>
+  </div>
+  <button class="btn btn-primary" id="formButton" (click)="deletePerson()">Delete</button>
 </div>

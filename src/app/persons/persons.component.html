@@ -18,10 +18,10 @@
     <td>{{person.firstName}}</td>
     <td>{{person.lastName}}</td>
     <td>{{person.email}}</td>
-    <td>{{person.birthDate}}</td>
+    <td>{{person.birthDate | date:'d MMM yyyy'}}</td>
     <td>
-      <button type="button" routerLink="/details/{{person.id}}" class="btn-info "> <i class="glyphicon glyphicon-pencil"></i></button>
-      <button type="button" routerLink="/delete/{{person.id}}" class="btn-danger "><i class="glyphicon glyphicon-trash"></i></button>
+      <button type="button" routerLink="/details/{{person.id}}" class="btn btn-outline-primary btn-sm">Edit</button>
+      <button type="button" routerLink="/delete/{{person.id}}" class="btn btn-outline-danger btn-sm">Delete</button>
     </td>
   </tr>
   </tbody>

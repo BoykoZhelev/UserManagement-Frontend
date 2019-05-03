@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RestService } from '../rest.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-person-edit',
@@ -28,12 +29,4 @@ export class EditComponent implements OnInit {
     });
   }
 
-  parseDate(dateString: string): Date {
-    console.log(dateString + '/////////////////////////////////////')
-    if (dateString) {
-      return new Date(dateString);
-    } else {
-      return null;
-    }
-  }
 }
