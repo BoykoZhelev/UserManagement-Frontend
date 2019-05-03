@@ -5,7 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Used software:  WebStorm
 Frameworks and libraries : Angular,  Angular CLI ,  Node.js,  Bootstrap
 
-The application is configured to search for webservice on localhost:8080
+The application is configured to search for webservice on 'http://localhost:8080/persons'
+The port can be changed in /project directory/src/app/rest.service.ts - endpoint constant
 
 Immediately before first build run 'npm install' and 'ng update'.
 
