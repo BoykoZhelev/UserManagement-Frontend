@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 Used software:  WebStorm
+
 Frameworks and libraries : Angular,  Angular CLI ,  Node.js,  Bootstrap
 
 The application is configured to search for webservice on 'http://localhost:8080/persons'
