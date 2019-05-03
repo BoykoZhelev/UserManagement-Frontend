@@ -3,19 +3,19 @@
   <div class="input-group">
     <label for="fName" class="input-label">First name</label>
     <div class="input-group  mb-3">
-      <input class="custom-input" id='fName' [(ngModel)]="personData.firstName" placeholder="First name" />
+      <input class="custom-input" id='fName' [(ngModel)]="personData.firstName" placeholder="First name" required="true" />
     </div>
     <label for="lName" class="input-label">Last name</label>
     <div class="input-group mb-3">
-      <input class="custom-input" id = 'lName' [(ngModel)]="personData.lastName" placeholder="Last name" />
+      <input class="custom-input" id = 'lName' [(ngModel)]="personData.lastName" placeholder="Last name" required="true" />
     </div>
     <label for="email" class="input-label">Email</label>
     <div class="input-group mb-3">
-      <input class="custom-input" id ='email' [(ngModel)]="personData.email" placeholder="Email" />
+      <input class="custom-input" id ='email' [(ngModel)]="personData.email" placeholder="Email" required="true" />
     </div>
     <label for="birthDate" class="input-label">Date of birth</label>
     <div class="input-group mb-3">
-      <input class="custom-input" id='birthDate' type="date" [ngModel] ="personData.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="personData.birthDate = $event">
+      <input class="custom-input" id='birthDate' type="date" [ngModel] ="personData.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="personData.birthDate = $event" required="true">
     </div>
   </div>
   <button class="btn btn-primary" id="formButton" (click)="updatePerson()">Update</button>
