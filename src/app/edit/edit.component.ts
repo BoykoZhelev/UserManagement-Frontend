@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RestService } from '../rest.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-person-edit',
@@ -22,11 +21,14 @@ export class EditComponent implements OnInit {
   }
 
   updatePerson() {
-    this.rest.updatePerson(this.route.snapshot.params.id, this.personData).subscribe((result) => {
-      this.router.navigate(['/persons']);
-    }, (err) => {
-      console.log(err);
-    });
+    // tslint:disable-next-line:triple-equals max-line-length
+    if (this.personData.birthDate != '' && this.personData.firstName != '' && this.personData.lastName != '' && this.personData.email != '') {
+      this.rest.updatePerson(this.route.snapshot.params.id, this.personData).subscribe((result) => {
+        this.router.navigate(['/persons']);
+      }, (err) => {
+        console.log(err);
+      });
+    }
   }
 
 }

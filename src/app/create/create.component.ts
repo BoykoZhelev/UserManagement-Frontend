@@ -17,11 +17,16 @@ export class CreateComponent implements OnInit {
   }
 
   createPerson() {
-    this.rest.addPerson(this.personData).subscribe((result) => {
-      this.router.navigate(['/persons']);
-    }, (err) => {
-      console.log(err);
-    });
+
+    // tslint:disable-next-line:triple-equals
+    if (this.personData.birthDate != '' && this.personData.firstName != '' && this.personData.lastName != '' && this.personData.email != '') {
+            this.rest.addPerson(this.personData).subscribe((result) => {
+        this.router.navigate(['/persons']);
+      }, (err) => {
+        console.log(err);
+      });
+    }
   }
+
 
 }
